@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stopNumber: 1
+  onStreet: MyText
+  atStreet: MyText
+  lat: 1.5
+  lon: 1.5
+
+two:
+  stopNumber: 1
+  onStreet: MyText
+  atStreet: MyText
+  lat: 1.5
+  lon: 1.5
