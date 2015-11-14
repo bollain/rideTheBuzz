@@ -13,7 +13,8 @@ class StopsController < ApplicationController
   end
 
   def search_stop
-    render json: params[:route]
+    response = HTTParty.get('http://api.translink.ca/rttiapi/v1/routes/99?apikey=UeuMwgvJ7kQ2cgFuDMVr', :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'})
+    body = JSON.parse(response.body)
   end
 
   # GET /stops/new
