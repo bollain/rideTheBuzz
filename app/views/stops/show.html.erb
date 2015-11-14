@@ -25,5 +25,20 @@
   <%= @stop.lon %>
 </p>
 
+<div class="col-xs-9">
+      <html>
+        <body>
+
+          <% latLonArr = Bus.parseLatLon(@bus) %>
+          <% html = Bus.imgStr(latLonArr) %>
+
+          <% img_height = 600 %>
+          
+          <img src=<%= html %> alt="Lamp" width=<%= img_height.to_s %> height=<%= img_height.to_s %> >
+
+        </body>
+      </html>
+    </div>
+
 <%= link_to 'Edit', edit_stop_path(@stop) %> |
 <%= link_to 'Back', stops_path %>

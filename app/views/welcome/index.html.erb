@@ -2,7 +2,7 @@
 
 <h2>Please enter your route</h2>
 
-<%= form_tag("/search_stop", method: "get") do %>
+<%= form_tag("/findBuses", method: "get") do %>
   <%= label_tag(:route, "Search for:") %>
   <%= text_field_tag(:route) %>
   <%= submit_tag("Search") %>

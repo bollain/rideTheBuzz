@@ -1,5 +1,7 @@
 class BusesController < ApplicationController
   before_action :set_bus, only: [:show, :edit, :update, :destroy]
+  include BusesHelper
+
 
   # GET /buses
   # GET /buses.json
@@ -20,6 +22,15 @@ class BusesController < ApplicationController
   # GET /buses/1/edit
   def edit
   end
+
+  #Show all buses found
+  def findBuses
+    Bus.delete_all
+    route = params[:route]
+    Bus.findStops(route)
+    redirect_to buses_path
+  end
+
 
   # POST /buses
   # POST /buses.json

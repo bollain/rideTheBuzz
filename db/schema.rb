@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114192012) do
+ActiveRecord::Schema.define(version: 20151114214709) do
+
+  create_table "buses", force: :cascade do |t|
+    t.text     "destination"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "direction"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "stops", force: :cascade do |t|
     t.integer  "stopNumber"
