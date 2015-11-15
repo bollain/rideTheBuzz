@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bus: 1
+  latitude: 1.5
+  longitude: 1.5
+  number: MyString
+
+two:
+  bus: 1
+  latitude: 1.5
+  longitude: 1.5
+  number: MyString
