@@ -20,6 +20,19 @@
   <%= @bus.direction %>
 </p>
 
+<p>
+  <strong>Bus ID:</strong>
+  <%= @bus.bid %>
+</p>
+<div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" onclick="codeAddress()">Create Alert!</button>
+        </span>
+        <form onsubmit="codeAddress(); return false">
+          <input id="address" class="form-control" placeholder="Enter Address">
+        </form>
+</div><!-- /input-group --> 
+
 <div class="col-xs-9">
       <html>
         <body>

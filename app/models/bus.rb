@@ -10,7 +10,7 @@ class Bus < ActiveRecord::Base
 		response = HTTParty.get('http://api.translink.ca/rttiapi/v1/buses?apikey=UeuMwgvJ7kQ2cgFuDMVr&routeNo='+route, :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'})
 
 		response.each do |b|
-			Bus.create(direction: b['Direction'], latitude: b['Latitude'], longitude: b['Longitude'], destination: b['Destination'] )
+			Bus.create(direction: b['Direction'], latitude: b['Latitude'], longitude: b['Longitude'], destination: b['Destination'], bid: b['VehicleNo'] )
 		end
 		
 	end

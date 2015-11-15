@@ -9,6 +9,7 @@
       <th>Latitude</th>
       <th>Longitude</th>
       <th>Direction</th>
+      <th>Bus ID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= bus.latitude %></td>
         <td><%= bus.longitude %></td>
         <td><%= bus.direction %></td>
+        <td><%= bus.bid %></td>
         <td><%= link_to 'Show', bus %></td>
         <td><%= link_to 'Edit', edit_bus_path(bus) %></td>
         <td><%= link_to 'Destroy', bus, method: :delete, data: { confirm: 'Are you sure?' } %></td>

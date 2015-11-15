@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115001146) do
+ActiveRecord::Schema.define(version: 20151115002749) do
 
   create_table "alerts", force: :cascade do |t|
     t.integer  "bus"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20151115001146) do
     t.string   "direction"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "bid"
   end
 
   create_table "stops", force: :cascade do |t|
